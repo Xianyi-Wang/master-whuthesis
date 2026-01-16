@@ -16,6 +16,7 @@
 
 PS：用overleaf在线写作编译不用安装，但是overleaf是linux环境，可能会遇到字体不适配的问题，且编译速度没有本地快。最开始我用overleaf各种字体报错找不到，本地部署后没问题，不过后边试了试overleaf改了参数又编译成功了（orz）
 个人建议本地部署，保姆级教程如下：
+
 0. 下载本项目。
 1. 下载安装tex：在计算机上安装 TeX 发行版，详细的安装指南见 [install-latex-guide-zh-cn](https://ctan.org/pkg/install-latex-guide-zh-cn)
 2. 编辑器：
