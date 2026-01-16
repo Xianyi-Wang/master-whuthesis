@@ -16,17 +16,19 @@
 
 PS：用overleaf在线写作编译不用安装，但是overleaf是linux环境，可能会遇到字体不适配的问题，且编译速度没有本地快。最开始我用overleaf各种字体报错找不到，本地部署后没问题，不过后边试了试overleaf改了参数又编译成功了（orz）
 个人建议本地部署，保姆级教程如下：
-
+0. 下载本项目。
 1. 下载安装tex：在计算机上安装 TeX 发行版，详细的安装指南见 [install-latex-guide-zh-cn](https://ctan.org/pkg/install-latex-guide-zh-cn)
 2. 编辑器：
-  * 推荐vscode或cursor就行，cursor遇到问题直接chat很方便。（看了下vscode也更新代码agent看着和cursor差不多了）
+ * 推荐vscode或cursor就行，cursor遇到问题直接chat很方便。（看了下vscode也更新代码agent看着和cursor差不多了）
   * 分屏左边编辑器写作（点击查看→自动换行，可以自动换行显示，不然编辑时一段就显示一行要横着滚动），右边浏览器打开demo.pdf编译好就刷新查看。
   * 其他的texpad啥的我下了感觉也没那么好用。
 3. 写作：
-   * pages下是各个章节，我已经都include到demo里了，无脑在对应章节填内容就行。图表格式按模板复制修改即可。更多使用细节请参考原作者使用手册（项目里的whuthesis.pdf）
-   * ref/refs.bib下是参考文献，在谷歌学术或知网文章都有引用按钮，选择bibtex格式，粘贴进去就行。再到正文\cite{}引用，会自动编号。
-   * 图片放进logo文件夹下，在正文里直接按格式引用就行（已经全局设置了logo路径，直接引用图片文件名就行）在模板里我也有给示例。
-   * demo.tex里填写封面信息和致谢。
+
+* pages下是各个章节，我已经都include到demo里了，无脑在对应章节填内容就行。图表格式按模板复制修改即可。更多使用细节请参考原作者使用手册（项目里的whuthesis.pdf）
+
+* ref/refs.bib下是参考文献，在谷歌学术或知网文章都有引用按钮，选择bibtex格式，粘贴进去就行。再到正文\cite{}引用，会自动编号。
+* 图片放进logo文件夹下，在正文里直接按格式引用就行（已经全局设置了logo路径，直接引用图片文件名就行）在模板里我也有给示例。
+* demo.tex里填写封面信息和致谢。
 
 4. 编译方式：
 
