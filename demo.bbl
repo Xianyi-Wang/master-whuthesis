@@ -1,0 +1,54 @@
+\begin{thebibliography}{7}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}
+  \def\eprint#1#2{#2}
+\else
+  \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+  \let\eprint\href
+\fi
+
+\bibitem[程擎\ 等(2021)程擎, 范满, 李彦冬, 赵远, and
+  李诚龙]{JSGG202119006}
+程擎, 范满, 李彦冬, 等.
+\newblock 无人机航拍图像语义分割研究综述\allowbreak[J].
+\newblock 计算机工程与应用, 2021, 57\allowbreak (19): 57-69.
+
+\bibitem[Long et~al.(2015)Long, Shelhamer, and Darrell]{fcn}
+LONG J, SHELHAMER E, DARRELL T.
+\newblock Fully convolutional networks for semantic
+  segmentation\allowbreak[C]//\allowbreak
+Proceedings of the IEEE conference on computer vision and pattern recognition.
+\newblock 2015: 3431-3440.
+
+\bibitem[戴军\ 等(2002)戴军 and 袁惠新]{whu-bachelor:1}
+戴军, 袁惠新.
+\newblock 膜技术在含油废水处理中的应用\allowbreak[J].
+\newblock 膜科学与技术, 2002, 22\allowbreak (2): 59-64.
+
+\bibitem[毛侠\ 等(2003)毛侠 and 孙云]{whu-bachelor:2}
+毛侠, 孙云.
+\newblock 和谐图案的自动生成研究\allowbreak[C]//\allowbreak
+第一届中国情感计算及智能交互学术会议论文集.
+\newblock 北京: 中国科学院自动化研究所, 2003: 277-279.
+
+\bibitem[王湛(2000)]{whu-bachelor:3}
+王湛.
+\newblock 膜分离技术基础\allowbreak[M].
+\newblock 北京: 化学工业出版社, 2000: 14-21, 30.
+
+\bibitem[{World Health Organization}(1970)]{whu-bachelor:5}
+{World Health Organization}.
+\newblock Factors regulating the immune response: report of {WHO Scientific
+  Group}\allowbreak[R].
+\newblock Geneva: WHO, 1970.
+
+\bibitem[XXX(1996)]{whu-bachelor:7}
+XXX.
+\newblock GB/T 16159-1996, 汉语拼音证词法基本规则\allowbreak[S].
+\newblock 北京: 中国标准出版社, 1996.
+
+\end{thebibliography}
