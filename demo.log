@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.12.30)  16 JAN 2026 23:15
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.12.30)  15 MAR 2026 15:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1311,7 +1311,11 @@ LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count388
 )) (./demo.aux
 (./pages/chapter1.aux) (./pages/chapter2.aux) (./pages/chapter3.aux)
-(./pages/chapter4.aux) (./pages/chapter5.aux) (./pages/appendix.aux))
+(./pages/chapter4.aux
+
+LaTeX Warning: Label `table:simple' multiply defined.
+
+) (./pages/chapter5.aux) (./pages/appendix.aux))
 \openout1 = `demo.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
@@ -1553,6 +1557,13 @@ Package fontspec Info:
 
 
 ]
+
+Package fontspec Info: 
+(fontspec)             Script 'CJK' not explicitly supported within font
+(fontspec)             'Songti SC Light'. Check the typeset output, and if it
+(fontspec)             is okay then ignore this warning. Otherwise a different
+(fontspec)             font should be chosen.
+
 LaTeX Font Info:    Font shape `TU/texgyretermes-math.otf(2)/m/n' will be
 (Font)              scaled to size 7.00075pt on input line 65.
 LaTeX Font Info:    Font shape `TU/texgyretermes-math.otf(2)/m/n' will be
@@ -1650,56 +1661,49 @@ e=dflt;+smcp;"
 
 File: logo/whu-logo.pdf Graphic file (type pdf)
 <use logo/whu-logo.pdf>
-Package hyperref Info: bookmark level for unknown definition defaults to 0 on i
-nput line 150.
 
 
 [3]
+Package hyperref Info: bookmark level for unknown definition defaults to 0 on i
+nput line 168.
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on inpu
-t line 155.
+t line 173.
 Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
-t line 168.
+t line 186.
 Package hyperref Info: bookmark level for unknown property defaults to 0 on inp
-ut line 172.
+ut line 190.
 Package hyperref Info: bookmark level for unknown proposition defaults to 0 on 
-input line 176.
+input line 194.
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
-put line 180.
+put line 198.
 
 
 [4]
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
-line 184.
+line 202.
 Package hyperref Info: bookmark level for unknown axiom defaults to 0 on input 
-line 188.
+line 206.
 Package hyperref Info: bookmark level for unknown counterexample defaults to 0 
-on input line 192.
+on input line 210.
 Package hyperref Info: bookmark level for unknown conjecture defaults to 0 on i
-nput line 196.
+nput line 214.
 Package hyperref Info: bookmark level for unknown question defaults to 0 on inp
-ut line 200.
+ut line 218.
 Package hyperref Info: bookmark level for unknown claim defaults to 0 on input 
-line 204.
+line 222.
 Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
- line 208.
+ line 226.
 LaTeX Font Info:    Font shape `TU/texgyretermes(0)/m/sl' in size <12.045> not 
 available
 (Font)              Font shape `TU/texgyretermes(0)/m/it' tried instead on inpu
-t line 255.
-
-Package fontspec Info: 
-(fontspec)             Script 'CJK' not explicitly supported within font
-(fontspec)             'Songti SC Light'. Check the typeset output, and if it
-(fontspec)             is okay then ignore this warning. Otherwise a different
-(fontspec)             font should be chosen.
-
+t line 273.
 
 
 [5]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12.045> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 264.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 282.
 LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <12.045> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 264.
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 282.
 )
 
 [6]
@@ -1775,13 +1779,17 @@ File: logo/whu-logo.png Graphic file (type bmp)
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/07/14>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 36552 strings out of 473832
- 770845 string characters out of 5729480
- 1298187 words of memory out of 5000000
- 58913 multiletter control sequences out of 15000+600000
- 568767 words of font info for 178 fonts, out of 8000000 for 9000
+ 36563 strings out of 473832
+ 771153 string characters out of 5729480
+ 1293676 words of memory out of 5000000
+ 58922 multiletter control sequences out of 15000+600000
+ 568783 words of font info for 180 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  118i,15n,120p,2037b,719s stack positions out of 10000i,1000n,20000p,200000b,200000s
 

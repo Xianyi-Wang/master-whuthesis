@@ -118,6 +118,21 @@
     \newpage \null \thispagestyle{empty} \newpage
   }
 
+% % 重新定义空白页生成命令
+% \cs_new:Npn \__whu_new_blank_page:
+%   {
+%     \clearpage          % 替代\newpage，清空浮动元素，确保页面真正生成
+%     \pagestyle{empty}   % 先全局设置为空白样式（双重保障）
+%     \null               % 确保页面有内容（无内容则不会生成页面）
+%     \thispagestyle{empty} % 强制当前页为空白样式
+%     \clearpage          % 结束当前空白页
+%     % 恢复之前的页眉样式（根据上下文切换，这里默认恢复摘要页样式，可按需改master-mainmatter）
+%     \pagestyle{master-frontmatter}
+%   }
+
+
+
+
 %tag 分散盒子
 \cs_new_protected:Npn \__whu_spread_box:nn #1#2
   % #1: 宽度
@@ -908,9 +923,10 @@
             beforeskip  = 4 ex plus 0.5 ex,
             afterskip   = 4 ex plus 0.5 ex,
             fixskip     = true,
-            pagestyle   = \bool_if:nTF \l__whu_style_chapter_page_header_bool
-              { master-mainmatter } { empty }
-          },
+            % pagestyle   = \bool_if:nTF \l__whu_style_chapter_page_header_bool
+            % { master-mainmatter } { empty }
+            pagestyle   = master-mainmatter,
+           },
         section = 
           {
             format      = \zihao{4}\sffamily,
@@ -934,6 +950,7 @@
           },
     }
   }
+    
 \cs_new_protected:Npn \__whu_master_set_enumerate_format:
   {
     % enumerate
@@ -2206,30 +2223,76 @@
     % 垂直间距
     \setlength{\cftbeforechapskip}{0pt}
   }
+
+
+% %tag 硕士设置
+% \cs_new:Npn \__whu_master_set_tocline:
+%   {
+%     \keys_set:nn { ctex }
+%       { contentsname   = \c__whu_name_toc_tl }
+%     % 字体字号
+%     \renewcommand{\cftchapfont}{\heiti \zihao{4}}
+%     \renewcommand{\cftsecfont}{\normalfont \zihao{-4}}
+%     \renewcommand{\cftsubsecfont}{\normalfont \zihao{-4}}
+%     % % 缩进
+%     % \dim_set:Nn \cftchapindent { 0em }
+%     % \dim_set:Nn \cftsecindent  { 0em }
+%     % \dim_set:Nn \cftsubsecindent { 0em }
+%     % 计数器宽度
+%     % \dim_set:Nn \cftchapnumwidth { 1.5em }
+%     \dim_set:Nn \cftsecnumwidth { 2em }
+%     \dim_set:Nn \cftsubsecnumwidth { 2.8em }
+%     % chapter前的额外垂直间距
+%     % \dim_set:Nn \cftbeforechapskip { 0.5\baselineskip }
+%     % section前的额外垂直间距
+%     % \dim_set:Nn \cftbeforesecskip { 0.2\baselineskip }
+%     % subsection前的额外垂直间距
+%     % \dim_set:Nn \cftbeforesubsecskip { 0pt }
+%   }
+
+
 %tag 硕士设置
 \cs_new:Npn \__whu_master_set_tocline:
   {
+    % ========== 1. 目录标题“目录”样式：黑体小二号加粗、两字空两格、居中 ==========
     \keys_set:nn { ctex }
-      { contentsname   = \c__whu_name_toc_tl }
-    % 字体字号
-    \renewcommand{\cftchapfont}{\heiti \zihao{4}}
-    \renewcommand{\cftsecfont}{\normalfont \zihao{-4}}
-    \renewcommand{\cftsubsecfont}{\normalfont \zihao{-4}}
-    % % 缩进
-    % \dim_set:Nn \cftchapindent { 0em }
-    % \dim_set:Nn \cftsecindent  { 0em }
-    % \dim_set:Nn \cftsubsecindent { 0em }
-    % 计数器宽度
-    % \dim_set:Nn \cftchapnumwidth { 1.5em }
+      { contentsname   = 目\quad 录 }  % 两字中间加两个空格
+    \renewcommand{\cfttoctitlefont}{\centering \bfseries \zihao{2}}  % 居中、小二号、加粗
+    \renewcommand{\cftaftertoctitle}{\par\vspace{1em}}  % 标题下方空行
+
+    % ========== 2. 字体设置（仅保留核心样式，避免字体强制指定） ==========
+    % 一级标题：宋体小四、加粗（仅文字，页码不加粗）
+    \renewcommand{\cftchapfont}{\bfseries \zihao{-4}}
+    \renewcommand{\cftchappagefont}{\normalfont}       % 一级页码取消加粗
+    % 二级标题：宋体小四、不加粗、缩进2字符
+    \renewcommand{\cftsecfont}{\zihao{-4}}
+    \renewcommand{\cftsecpagefont}{\normalfont}        % 二级页码不加粗
+    % 三级标题：宋体小四、不加粗、缩进4字符
+    \renewcommand{\cftsubsecfont}{\zihao{-4}}
+    \renewcommand{\cftsubsecpagefont}{\normalfont}     % 三级页码不加粗
+
+    % ========== 3. 缩进要求：一级顶格、二级2字符、三级4字符 ==========
+    \dim_set:Nn \cftchapindent { 0em }    % 一级标题顶格
+    \dim_set:Nn \cftsecindent  { 2em }    % 二级缩进2字符
+    \dim_set:Nn \cftsubsecindent { 4em }  % 三级缩进4字符
+
+    % ========== 4. 计数器宽度（保留原有配置） ==========
+    \dim_set:Nn \cftchapnumwidth { 1.5em }
     \dim_set:Nn \cftsecnumwidth { 2em }
     \dim_set:Nn \cftsubsecnumwidth { 2.8em }
-    % chapter前的额外垂直间距
-    % \dim_set:Nn \cftbeforechapskip { 0.5\baselineskip }
-    % section前的额外垂直间距
+
+    % ========== 5. 核心修复：调整一级标题间距为1.5倍行距 ==========
+    \dim_set:Nn \cftbeforechapskip { 0pt }  % 取消一级标题前的额外间距（关键）
+    \setlength{\cftparskip}{0pt}            % 取消条目间的段落间距
+    % 1.5倍行距（全局目录生效）
+    \AtBeginDocument{\addtocontents{toc}{\protect\linespread{1.5}\protect\selectfont}}
+
+    % ========== 6. 保留原有间距配置（如需微调可取消注释） ==========
     % \dim_set:Nn \cftbeforesecskip { 0.2\baselineskip }
-    % subsection前的额外垂直间距
     % \dim_set:Nn \cftbeforesubsecskip { 0pt }
   }
+
+
 %tag 博士设置
 \cs_new:Npn \__whu_doctor_set_tocline:
   {
@@ -2520,42 +2583,106 @@
 % 表标题位于表格上方；表标题宋体粗体五号，表内容宋体五号
 % 硕博的规定不清楚，先按和本科一样处理
 
-% 图
-\DeclareCaptionFont { whufigurecaptionfont }
-  { \bfseries \zihao { 5 } }
-% 表
-\DeclareCaptionFont { whutablecaptionfont }
-  { \bfseries \zihao { 5 } }
+% % 图
+% \DeclareCaptionFont { whufigurecaptionfont }
+%   { \bfseries \zihao { 5 } }
+% % 表
+% \DeclareCaptionFont { whutablecaptionfont }
+%   { \bfseries \zihao { 5 } }
 
+% \captionsetup [ figure ]
+%   {
+%     font     = whufigurecaptionfont,
+%     position = bottom,
+%     labelsep = space
+%   }
+% \captionsetup [ table  ]
+%   {
+%     font     = whutablecaptionfont,
+%     position = top,
+%     labelsep = space
+%   }
+% \AddToHook { env / tabular / begin }
+%   { \zihao{5} }
+
+
+% ========== 原作者格式 + 最新字体/行距要求 ==========
+% 图标题：楷体五号加粗、单倍行距
+\DeclareCaptionFont { whufigurecaptionfont }
+  { \kaishu \bfseries \zihao { 5 } \linespread{1.0}\selectfont } % 单倍行距用linespread（无包依赖）
+% 表标题：楷体五号加粗、单倍行距
+\DeclareCaptionFont { whutablecaptionfont }
+  { \kaishu \bfseries \zihao { 5 } \linespread{1.0}\selectfont }
+
+% 图配置：下方居中、段前/后0.5行
 \captionsetup [ figure ]
   {
     font     = whufigurecaptionfont,
     position = bottom,
-    labelsep = space
+    labelsep = space,
+    justification = centering,  % 居中
+    aboveskip = 0.5\baselineskip, % 段前0.5行
+    skip = 0.5\baselineskip       % 段后0.5行
   }
+% 表配置：上方居中、段前/后0.5行
 \captionsetup [ table  ]
   {
     font     = whutablecaptionfont,
     position = top,
-    labelsep = space
+    labelsep = space,
+    justification = centering,  % 居中
+    aboveskip = 0.5\baselineskip, % 段前0.5行
+    skip = 0.5\baselineskip       % 段后0.5行
   }
+
+% 表格内容：宋体五号、单倍行距、居中（完全沿用原作者AddToHook格式）
 \AddToHook { env / tabular / begin }
-  { \zihao{5} }
+  { \zihao{5} \songti \linespread{1.0}\selectfont \centering }
+% 续表内容同步格式
+\AddToHook { env / longtable / begin }
+  { \zihao{5} \songti \linespread{1.0}\selectfont \centering }
+
+% ========== 表格/图片说明文字（最新要求） ==========
+% 表格说明：楷体五号加粗、单倍行距、段前0.5行、段后0.5行、首行空两字符
+\newcommand{\tabnote}[1]{%
+  \par\vspace{0.5\baselineskip}% 段前0.5行
+  \kaishu \bfseries \zihao{5} \linespread{1.0}\selectfont
+  \setlength{\parindent}{2em}% 首行空两字符
+  #1%
+  \par\vspace{0.5\baselineskip}% 段后0.5行
+}
+
+% 图片说明：楷体五号加粗、单倍行距、段前0.5行、段后0.5行、首行空两字符
+\newcommand{\fignote}[1]{%
+  \par\vspace{0.5\baselineskip}% 段前0.5行
+  \kaishu \bfseries \zihao{5} \linespread{1.0}\selectfont
+  \setlength{\parindent}{2em}% 首行空两字符
+  #1%
+  \par\vspace{0.5\baselineskip}% 段后0.5行
+}
+
+% ========== 续表兼容（极简写法，无LTcontinuedcaption） ==========
+\newcommand{\continuationtabletitle}[1]{%
+  \kaishu \bfseries \zihao{5} \linespread{1.0}\selectfont
+  续表#1\quad
+}
+%endregion
+
+
 % --- 在这里添加下面的代码 ---
 % 核心修改：将编号中的点 "." 替换为连字符 "-"
 % 假设你使用的是 report 或 book 文档类 (有 \chapter)
 \renewcommand{\thefigure}{\thechapter-\arabic{figure}} % 修改图片编号格式
-\renewcommand{\thetable}{\thechapter-\arabic{table}}   % 修改表格编号格式
+\renewcommand{\thetable}{\thechapter-\arabic{table}}
+\renewcommand{\theequation}{\thechapter-\arabic{equation}}
 
-% 如果你使用的是 article 文档类 (没有 \chapter), 请使用下面这两行代替
-% \renewcommand{\thefigure}{\thesection-\arabic{figure}}
-% \renewcommand{\thetable}{\thesection-\arabic{table}}
 % --- 添加结束 ---
 %endregion 图表设置
 
 %region 定理类环境 (theorem-like environments)
 
 % 去掉 . 号，但只能通过新定义 style 的方式进行
+
 \declaretheoremstyle
   [
     headpunct     = {},

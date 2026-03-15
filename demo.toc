@@ -1,3 +1,4 @@
+\linespread {1.5}\selectfont 
 \contentsline {chapter}{摘\hspace {2em}要}{I}{chapter*.3}%
 \contentsline {chapter}{ABSTRACT}{II}{chapter*.4}%
 \contentsline {chapter}{\numberline {第一章\hspace {.3em}}绪论}{1}{chapter.1}%
@@ -27,7 +28,7 @@
 \contentsline {section}{\numberline {2.6}引用测试}{3}{section.2.6}%
 \contentsline {subsection}{\numberline {2.6.1}参考文献}{3}{subsection.2.6.1}%
 \contentsline {section}{\numberline {2.7}图表测试}{3}{section.2.7}%
-\contentsline {section}{\numberline {2.8}算法}{3}{section.2.8}%
+\contentsline {section}{\numberline {2.8}算法}{4}{section.2.8}%
 \contentsline {section}{\numberline {2.9}已定义好的一些数学定理环境}{4}{section.2.9}%
 \contentsline {section}{\numberline {2.10}字体测试}{5}{section.2.10}%
 \contentsline {chapter}{\numberline {第三章\hspace {.3em}}基于XXXXX方法}{7}{chapter.3}%

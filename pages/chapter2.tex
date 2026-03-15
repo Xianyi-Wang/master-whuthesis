@@ -110,21 +110,39 @@ Use \texttt{align*} environment:
 
 引用图~\ref{fig:武汉大学校徽}
 
+% \begin{table}[ht]
+%   \centering
+%   \caption{%
+%     简单的表格和引用 abc 123 %\cite{whu-bachelor:1}
+%   }
+%   \label{table:简单的表格}
+%   \begin{tabular}{cc}
+%     \hline
+%     a & b \\ \hline
+%     c & d \\ \hline
+%     测试 & 文本 \\ \hline
+%   \end{tabular}
+% \end{table}
+
+% 标准学术三线表（需 booktabs 宏包，武大模板已自带，无需额外加载）
 \begin{table}[ht]
   \centering
   \caption{%
     简单的表格和引用 abc 123 %\cite{whu-bachelor:1}
   }
-  \label{table:简单的表格}
+  \label{table:simple}
+  % 三线表核心：仅保留 顶线、中线、底线，无竖线
   \begin{tabular}{cc}
-    \hline
-    a & b \\ \hline
-    c & d \\ \hline
-    测试 & 文本 \\ \hline
+    \toprule     % 顶部粗线
+    a & b \\      % 表头
+    \midrule     % 中间细线
+    c & d \\
+    测试 & 文本 \\
+    \bottomrule  % 底部粗线
   \end{tabular}
 \end{table}
 
-引用表~\ref{table:简单的表格}
+引用表~\ref{table:simple}
 
 
 \section{算法}
