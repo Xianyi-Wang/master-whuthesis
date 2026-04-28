@@ -200,7 +200,7 @@
   }
 
 \msg_new:nnn { whu } { invalid-circled-number }
-  { Invalid~ circled~ number~ #1. }
+  { Invalid~ circled~ number~ #1.}
 
 %tag tikz-绘制带圈数字
 \fp_new:N \l__whu_tikz_circled_number_xscale_fp   % 水平压缩系数
@@ -917,7 +917,7 @@
         secnumdepth = 3,
         chapter = 
           {
-            format      = \zihao{-2}\sffamily\centering,  % 修改1：将\raggedright（左对齐）改为\centering（居中）
+            format      = \zihao{2}\rmfamily\heiti\bfseries\centering,  % 修改1：将\raggedright（左对齐）改为\centering（居中）
             number      = \chinese{chapter}章,  % 中文数字后直接加“章”，与name={第}拼接为“第一章”
             name        = {第},  % 保留“第”，与number拼接为“第一、第二...”
             beforeskip  = 4 ex plus 0.5 ex,
@@ -929,23 +929,23 @@
            },
         section = 
           {
-            format      = \zihao{4}\sffamily,
-            % beforeskip  = 0.5 \baselineskip,
-            % afterskip   = 0.5 \baselineskip,
+            format      = \zihao{3}\rmfamily\heiti\bfseries,
+            beforeskip  = 1 \baselineskip,
+            % afterskip   = 1 \baselineskip,
             fixskip     = true,
           },
         subsection = 
           {
-            format      = \zihao{-4}\sffamily,
-            % beforeskip  = 0.5 \baselineskip,
-            % afterskip   = 0.5 \baselineskip,
+            format      = \zihao{-3}\rmfamily\bfseries,
+            beforeskip  = 1 \baselineskip,
+            afterskip   = 0.7 \baselineskip,
             fixskip     = true,
           },
         subsubsection = 
           {
-            format      = \zihao{-4}\sffamily,
-            % beforeskip  = 0.5 \baselineskip,
-            % afterskip   = 0.5 \baselineskip,
+            format      = \zihao{-4}\rmfamily\bfseries,
+            beforeskip  = 1 \baselineskip,
+            % afterskip   = 1 \baselineskip,
             fixskip     = true,
           },
     }
@@ -1067,16 +1067,17 @@
 \fancypagestyle { master-frontmatter }
   {
     \fancyhf { }
-    \fancyhead [CE] { 武汉大学硕士学位论文 }
-    \fancyhead [CO] { \l__whu_info_header_title_tl }
-    \fancyfoot [C]  { \zihao{5} \Roman{page} }
+    \fancyhead [CE] { \zihao{-5}\songti 武汉大学硕士学位论文 }
+    \fancyhead [CO] { \zihao{-5}\songti \l__whu_info_header_title_tl }
+    \fancyfoot [C]   { \zihao{-5} \Roman{page} }
   }
 \fancypagestyle { master-mainmatter  }
   {
-    \fancyhf { }
-    \fancyhead [CE] { 武汉大学硕士学位论文 }
-    \fancyhead [CO] { \l__whu_info_header_title_tl }
-    \fancyfoot [C]  { \zihao{5} \arabic{page} }
+  % 页眉：宋体小五号，居中
+    \fancyhead [CE] { \zihao{-5}\songti 武汉大学硕士学位论文 }
+    \fancyhead [CO] { \zihao{-5}\songti \l__whu_info_header_title_tl }
+    % 页码： Times New Roman 小五号，居中
+    \fancyfoot [C]  { \zihao{-5} \arabic{page} }
   }
 %tag 博士
 % 页眉从中文摘要开始至论文末，偶数页码内容为“武汉大学博士学位论文”，奇数页码内容为学位论文题目。
@@ -1822,8 +1823,10 @@
         {
           chapter =
             {
-              format = \sffamily\zihao{-2}\centering,
-              afterskip = 8ex,
+              % format = \sffamily\zihao{-2}\centering,
+              % afterskip = 8ex,
+              format = \heiti\zihao{-2}\centering, % 修改为黑体小二号
+              afterskip = 2\baselineskip, % 题目下面空一行
               pagestyle = empty
             }
         }
@@ -1921,7 +1924,10 @@
       {
         chapter =
           {
-            format+ = \centering,
+            % format+ = \centering,
+            format = \zihao{-2}\heiti\bfseries\centering, % 黑体小二号加粗，居中
+            beforeskip = 0.5\baselineskip, % 段前0.5行
+            afterskip = 1\baselineskip, % 段后0.5行
             pagestyle = empty
           }
       }
@@ -2013,7 +2019,7 @@
     \str_case:Vn \l__whu_abstract_keywords_zh_type_str
       {
         { newline } { \par \noindent }
-        { blankline } { \par \vspace*{ .5\baselineskip } \noindent }
+        { blankline } { \par \vspace*{ 1\baselineskip } \noindent }
         { vfill } { \par \vfill \noindent }
       }
   }
@@ -2022,7 +2028,7 @@
     \str_case:Vn \l__whu_abstract_keywords_en_type_str
       {
         { newline } { \par \noindent}
-        { blankline } { \par \vspace*{ .5\baselineskip } \noindent }
+        { blankline } { \par \vspace*{ 1\baselineskip } \noindent }
         { vfill } { \vfill }
       }
   }
@@ -2035,7 +2041,10 @@
           chapter =
             {
               numbering = false,
-              format+ = \centering,
+              % format+ = \centering,
+              format = \zihao{-2}\heiti\bfseries\centering, % 黑体小二号字加粗，居中
+              beforeskip = 0.5\baselineskip, % 段前0.5行
+              afterskip = 1\baselineskip, % 段后0.5行
               pagestyle = master-frontmatter
             }
         }
@@ -2059,7 +2068,9 @@
           chapter =
             {
               numbering = false,
-              format    = \normalfont\bfseries\centering\zihao{-2},
+              format    = \zihao{-2}\normalfont\bfseries\centering,
+              beforeskip = 0.5\baselineskip, % 段前0.5行
+              afterskip = 1\baselineskip, % 段后0.5行
               pagestyle = master-frontmatter
             }
         }
@@ -2254,13 +2265,15 @@
 %tag 硕士设置
 \cs_new:Npn \__whu_master_set_tocline:
   {
-    % ========== 1. 目录标题“目录”样式：黑体小二号加粗、两字空两格、居中 ==========
+    % ========== （1）目录标题“目录”样式：黑体小二号加粗、两字空两格、居中 ==========
     \keys_set:nn { ctex }
       { contentsname   = 目\quad 录 }  % 两字中间加两个空格
-    \renewcommand{\cfttoctitlefont}{\centering \bfseries \zihao{2}}  % 居中、小二号、加粗
+    %  \renewcommand{\cfttoctitlefont}{\zihao{-2} \heiti \centering \bfseries}  % 居中、黑体小二号、加粗
+    \renewcommand{\cfttoctitlefont}{\hfill\zihao{-2}\heiti\bfseries}
+    % \renewcommand{\cftaftertoctitle}{\hfill\par\vspace{1em}}
     \renewcommand{\cftaftertoctitle}{\par\vspace{1em}}  % 标题下方空行
 
-    % ========== 2. 字体设置（仅保留核心样式，避免字体强制指定） ==========
+    % ========== （2）字体设置（仅保留核心样式，避免字体强制指定） ==========
     % 一级标题：宋体小四、加粗（仅文字，页码不加粗）
     \renewcommand{\cftchapfont}{\bfseries \zihao{-4}}
     \renewcommand{\cftchappagefont}{\normalfont}       % 一级页码取消加粗
@@ -2270,18 +2283,20 @@
     % 三级标题：宋体小四、不加粗、缩进4字符
     \renewcommand{\cftsubsecfont}{\zihao{-4}}
     \renewcommand{\cftsubsecpagefont}{\normalfont}     % 三级页码不加粗
+     % 引导线
+    \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
 
-    % ========== 3. 缩进要求：一级顶格、二级2字符、三级4字符 ==========
+    % ========== （3）缩进要求：一级顶格、二级2字符、三级4字符 ==========
     \dim_set:Nn \cftchapindent { 0em }    % 一级标题顶格
     \dim_set:Nn \cftsecindent  { 2em }    % 二级缩进2字符
     \dim_set:Nn \cftsubsecindent { 4em }  % 三级缩进4字符
 
-    % ========== 4. 计数器宽度（保留原有配置） ==========
+    % ========== （4）计数器宽度（保留原有配置） ==========
     \dim_set:Nn \cftchapnumwidth { 1.5em }
     \dim_set:Nn \cftsecnumwidth { 2em }
     \dim_set:Nn \cftsubsecnumwidth { 2.8em }
 
-    % ========== 5. 核心修复：调整一级标题间距为1.5倍行距 ==========
+    % ========== （5）核心修复：调整一级标题间距为1.5倍行距 ==========
     \dim_set:Nn \cftbeforechapskip { 0pt }  % 取消一级标题前的额外间距（关键）
     \setlength{\cftparskip}{0pt}            % 取消条目间的段落间距
     % 1.5倍行距（全局目录生效）
@@ -2375,7 +2390,13 @@
     \group_begin:
       \keys_set:nn { ctex }
         {
-          chapter / format = \centering \zihao{-2} \heiti,
+          % chapter / format = \centering \zihao{-2} \heiti,
+          chapter = 
+            {
+              format = \zihao{-2}\heiti\centering, % 黑体小二，居中
+              beforeskip = 0.5\baselineskip, % 段前0.5行
+              afterskip = 1\baselineskip, % 段后0.5行
+            }
         }
       \chapter* { 致 \qquad 谢 }
       \addcontentsline{toc}{chapter}{致谢}
@@ -2394,12 +2415,24 @@
             section/number = \Alph{chapter}\arabic{section},
             subsection/number = \Alph{chapter}\arabic{section}.\arabic{subsection},
             subsubsection/number = \Alph{chapter}\arabic{section}.\arabic{subsection}.\arabic{subsubsection},
-          }
+           }
       }
   }
 \tl_if_eq:NnT \g__whu_thesis_type_tl { bachelor }
   {
     \__whu_bachelor_set_appendix:
+  }
+\tl_if_eq:NnT \g__whu_thesis_type_tl { master }
+  {
+    \AddToHook { cmd / appendix / after }
+      {
+        \keys_set:nn { ctex }
+          {
+            chapter/format      = \zihao{-2}\heiti\centering,
+            chapter/beforeskip  = 0.5\baselineskip,
+            chapter/afterskip   = 1\baselineskip,
+          }
+      }
   }
 %endregion 附录设置
 
@@ -2838,8 +2871,8 @@
   }
 %region 加载宏包
 %tag bibtex 此时分两种情况：
-% Case 1. bib-style = numerical or author-year，则调用 gbt7714 宏包，此宏包内部调用 natbib 宏包
-% Case 2. otherwise，直接调用 natbib
+% Case （1）bib-style = numerical or author-year，则调用 gbt7714 宏包，此宏包内部调用 natbib 宏包
+% Case （2）otherwise，直接调用 natbib
 \ctex_at_end_preamble:n
   {
     \tl_if_eq:NnT \l__whu_bib_backend_tl { bibtex }
@@ -2900,7 +2933,21 @@
     \ctex_patch_cmd:Nnn \NAT@citexnum
       { - \NAT@penalty }
       { \textendash \NAT@penalty }
-    \cs_set:Npn \bibsection { \__whu_chapter:V \bibname }
+    % \cs_set:Npn \bibsection { \__whu_chapter:V \bibname }
+    \cs_set:Npn \bibsection { 
+      \begingroup
+      \keys_set:nn { ctex } 
+        {
+          chapter =
+            {
+              format = \heiti\bfseries\zihao{4}\centering, % 黑体四号加粗，居中
+              beforeskip = 0.5\baselineskip, % 段前0.5行
+              afterskip = 1\baselineskip, % 段后0.5行
+            }
+        }
+      {\linespread{1.5}\selectfont \__whu_chapter:V \bibname} % 1.5倍行距
+      \endgroup
+    }
     % 让 bibtex 的接口与 biblatex 保持一致
     \NewDocumentCommand \printbibliography { o }
       {
@@ -2910,7 +2957,9 @@
       }
     % 行距与字号
     \setlength{\bibsep}{0pt}
-    \renewcommand{\bibfont}{\zihao{-4}\linespread{1.625}\selectfont}
+    % \renewcommand{\bibfont}{\zihao{-4}\linespread{1.625}\selectfont}
+    \setlength{\bibhang}{2\ccwd} % 悬挂缩进2字符
+    \renewcommand{\bibfont}{\zihao{5}\songti\linespread{1.5}\selectfont} % 内容五号，宋体（英文会自动使用Times New Roman，因为之前有全局设置），1.5倍行距
   }
 \__whu_msg_new:nn { invalid-option-in-bibtex }
   { Option(s)~ "#1"~ are~ invalid~ in~ BibTeX. }
@@ -2950,9 +2999,25 @@
     \clist_map_function:NN \l__whu_bib_resource_clist \addbibresource
     \__whu_biblatex_allow_url_break:
     \__whu_biblatex_use_en_dash:
-    \defbibheading { bibliography } [ \bibname ] { \__whu_chapter:n {##1} }
+    % \defbibheading { bibliography } [ \bibname ] { \__whu_chapter:n {##1} }
+    \defbibheading { bibliography } [ \bibname ] { 
+      \begingroup
+      \keys_set:nn { ctex } 
+        {
+          chapter =
+            {
+              format = \heiti\bfseries\zihao{4}\centering,
+              beforeskip = 0.5\baselineskip,
+              afterskip = 1\baselineskip,
+            }
+        }
+      {\linespread{1.5}\selectfont \__whu_chapter:n {##1}}
+      \endgroup
+    }
     \setlength{\bibitemsep}{0pt}
-    \renewcommand{\bibfont}{\zihao{-4}\linespread{1.625}\selectfont}
+    % \renewcommand{\bibfont}{\zihao{-4}\linespread{1.625}\selectfont}
+    \setlength{\bibhang}{2\ccwd} % 悬挂缩进2字符
+    \renewcommand{\bibfont}{\zihao{5}\songti\linespread{1.5}\selectfont}
   }
 % biblatex 下允许 URL 在字母、数字和一些特殊符号处断行
 \cs_new:Npn \__whu_biblatex_allow_url_break:

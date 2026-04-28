@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.12.30)  15 MAR 2026 15:33
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.12.30)  28 APR 2026 16:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1580,14 +1580,6 @@ File: ./logo/whu-logo.pdf Graphic file (type pdf)
 
 ]
 
-Package fontspec Info: 
-(fontspec)             Script 'CJK' not explicitly supported within font
-(fontspec)             'Heiti SC Light'. Check the typeset output, and if it
-(fontspec)             is okay then ignore this warning. Otherwise a different
-(fontspec)             font should be chosen.
-
-
-
 [3
 
 ] (./pages/innovation.tex)
@@ -1668,6 +1660,9 @@ Package hyperref Info: bookmark level for unknown definition defaults to 0 on i
 nput line 168.
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on inpu
 t line 173.
+
+
+[4]
 Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
 t line 186.
 Package hyperref Info: bookmark level for unknown property defaults to 0 on inp
@@ -1676,9 +1671,6 @@ Package hyperref Info: bookmark level for unknown proposition defaults to 0 on
 input line 194.
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
 put line 198.
-
-
-[4]
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
 line 202.
 Package hyperref Info: bookmark level for unknown axiom defaults to 0 on input 
@@ -1693,6 +1685,13 @@ Package hyperref Info: bookmark level for unknown claim defaults to 0 on input
 line 222.
 Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
  line 226.
+
+Package fontspec Info: 
+(fontspec)             Script 'CJK' not explicitly supported within font
+(fontspec)             'Heiti SC Light'. Check the typeset output, and if it
+(fontspec)             is okay then ignore this warning. Otherwise a different
+(fontspec)             font should be chosen.
+
 LaTeX Font Info:    Font shape `TU/texgyretermes(0)/m/sl' in size <12.045> not 
 available
 (Font)              Font shape `TU/texgyretermes(0)/m/it' tried instead on inpu
@@ -1785,11 +1784,11 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 36563 strings out of 473832
- 771153 string characters out of 5729480
- 1293676 words of memory out of 5000000
- 58922 multiletter control sequences out of 15000+600000
- 568783 words of font info for 180 fonts, out of 8000000 for 9000
+ 36594 strings out of 473832
+ 772483 string characters out of 5729480
+ 1300375 words of memory out of 5000000
+ 58946 multiletter control sequences out of 15000+600000
+ 568839 words of font info for 187 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  118i,15n,120p,2037b,719s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
