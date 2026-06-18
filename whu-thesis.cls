@@ -468,10 +468,14 @@
   {
     \geometry
       {
-        left       = 28mm,
-        right      = 25mm,
-        top        = 30mm,
-        bottom     = 29mm,
+        % left       = 28mm,
+        % right      = 25mm,
+        % top        = 30mm,
+        % bottom     = 29mm,
+        left       = 3.17cm,
+        right      = 3.17cm,
+        top        = 2.54cm,
+        bottom     = 2.54cm,
         headheight = 15pt
       }
   }
@@ -2352,11 +2356,12 @@
   }
 %endregion 目录
 
+
 %region 插图目录和表格目录
 \keys_set:nn { ctex }
   {
-    listfigurename = { 插\qquad 图 },
-    listtablename  = { 表\qquad 格 }
+    listfigurename = { 图索引 },
+    listtablename  = { 表索引 }
   }
 \cs_set_eq:NN \__whu_old_listoffigures: \listoffigures
 \RenewDocumentCommand \listoffigures { }
@@ -2367,6 +2372,7 @@
         chapter / format += \centering,
         chapter / pagestyle = \tl_use:N \g__whu_thesis_type_tl -frontmatter
       }
+    \addcontentsline{toc}{chapter}{图索引}  % ← 添加这行
     \__whu_old_listoffigures:
     \group_end:
   }
@@ -2379,6 +2385,7 @@
         chapter / format += \centering,
         chapter / pagestyle = \tl_use:N \g__whu_thesis_type_tl -frontmatter
       }
+    \addcontentsline{toc}{chapter}{表索引}  % ← 添加这行
     \__whu_old_listoftables:
     \group_end:
   }

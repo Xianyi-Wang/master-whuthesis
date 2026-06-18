@@ -53,7 +53,7 @@
     % 页面相关选项
     % chapter-page-header = true, % 章节首页是否有页眉
     % bachelor-encover = true, % 本科毕业论文英文封面
-    library, % 图书馆模式（去掉论文中所有的空白页）
+    library = true, % 图书馆模式（去掉论文中所有的空白页）
     license = false % 使用授权协议书（这个协议书和学校新给的长的不一样，建议自己打出来加进去）
     % fullwidth-stop = true, % 句号样式
     % footnote-style = <>, % 脚注编号样式
@@ -65,8 +65,8 @@
 \begin{document}
 
 \tableofcontents % 目录
-% \listoffigures % 图目录
-% \listoftables % 表目录
+\listoffigures % 图索引
+\listoftables % 表索引
 
 % 符号表
 % \begin{notation}

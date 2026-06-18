@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.12.30)  28 APR 2026 16:51
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.12.30)  19 JUN 2026 00:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1352,15 +1352,15 @@ LaTeX Info: Redefining \partial on input line 65.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
-* h-part:(L,W,R)=(79.66771pt, 446.70828pt, 71.13188pt)
-* v-part:(T,H,B)=(85.35826pt, 677.1756pt, 82.51299pt)
+* h-part:(L,W,R)=(90.19518pt, 417.11752pt, 90.19518pt)
+* v-part:(T,H,B)=(72.2698pt, 700.50723pt, 72.2698pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=446.70828pt
-* \textheight=677.1756pt
-* \oddsidemargin=7.39772pt
-* \evensidemargin=-1.1381pt
-* \topmargin=-21.78552pt
+* \textwidth=417.11752pt
+* \textheight=700.50723pt
+* \oddsidemargin=17.92519pt
+* \evensidemargin=17.92519pt
+* \topmargin=-34.87398pt
 * \headheight=15.0pt
 * \headsep=19.8738pt
 * \topskip=12.0pt
@@ -1596,6 +1596,9 @@ File: ./logo/whu-logo.pdf Graphic file (type pdf)
 [2
 
 ] (./demo.toc
+Underfull \vbox (badness 1308) has occurred while \output is active []
+
+
 
 [3
 
@@ -1605,7 +1608,23 @@ File: ./logo/whu-logo.pdf Graphic file (type pdf)
 
 
 
-[4]
+[4] (./demo.lof)
+\tf@lof=\write5
+\openout5 = `demo.lof'.
+
+
+
+[5
+
+] (./demo.lot)
+\tf@lot=\write6
+\openout6 = `demo.lot'.
+
+
+
+[6
+
+]
 \openout2 = `pages/chapter1.aux'.
 
  (./pages/chapter1.tex
@@ -1784,12 +1803,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 36594 strings out of 473832
- 772483 string characters out of 5729480
- 1300375 words of memory out of 5000000
- 58946 multiletter control sequences out of 15000+600000
+ 36610 strings out of 473832
+ 772649 string characters out of 5729480
+ 1300420 words of memory out of 5000000
+ 58956 multiletter control sequences out of 15000+600000
  568839 words of font info for 187 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  118i,15n,120p,2037b,719s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on demo.pdf (21 pages).
+Output written on demo.pdf (23 pages).

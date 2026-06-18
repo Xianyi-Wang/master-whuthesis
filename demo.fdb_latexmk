@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1768569770.75621 "/Users/wxy/myfiles/科研/自己论文-语义分割/大论文/mywhuthesis/demo.tex" "demo.pdf" "demo" 1768569771.94616 2
-  "/Users/wxy/myfiles/科研/自己论文-语义分割/大论文/mywhuthesis/demo.tex" 1768566731.69197 4088 11f569f85c59da78913ea92970050682 ""
+["pdflatex"] 1781800280.43385 "/Users/wxy/myfiles/科研/master-whuthesis模板/demo.tex" "demo.pdf" "demo" 1781800281.0948 2
+  "/Users/wxy/myfiles/科研/master-whuthesis模板/demo.tex" 1781800279.22534 3992 b357758cde779ac3971ebdeab863c31e ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1136768653 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
@@ -89,9 +89,9 @@
   "/usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf" 1739380943 42148 61becc7c670cd061bb319c643c27fdd4 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1767103950 3345747 8ef55fd1c7a55ffe015a4acb8381ddb0 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "demo.aux" 0 -1 0 "pdflatex"
-  "demo.tex" 1768566731.69197 4088 11f569f85c59da78913ea92970050682 ""
-  "whu-thesis.cls" 1768515785.56618 92333 c1069d2c9b77eb5cdd4a0c2a40d1cc8e ""
+  "demo.aux" 1781800280.43224 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "demo.tex" 1781800279.22534 3992 b357758cde779ac3971ebdeab863c31e ""
+  "whu-thesis.cls" 1781539187.78924 101157 8bed7b92c1ae822d5ef9fd00cce0ca1c ""
   (generated)
   "demo.aux"
   "demo.log"

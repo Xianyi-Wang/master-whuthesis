@@ -1,8 +1,8 @@
-PWD /Users/wxy/myfiles/科研/自己论文-语义分割/大论文/mywhuthesis
+PWD /Users/wxy/myfiles/科研/master-whuthesis模板
 INPUT /usr/local/texlive/2025/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/wxy/myfiles/科研/自己论文-语义分割/大论文/mywhuthesis/demo.tex
+INPUT /Users/wxy/myfiles/科研/master-whuthesis模板/demo.tex
 OUTPUT demo.log
 INPUT ./whu-thesis.cls
 INPUT whu-thesis.cls
